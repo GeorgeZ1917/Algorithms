@@ -11,10 +11,10 @@ which numbers are already in the permutation, such that they do not repeat.*/
 import java.util.Arrays;
 
 class Perm {
-    public static int n = 5;
+    private static int n = 5;
     public static int count = 0;
-    public static int perm [] = new int [ n + 1 ];
-    public static boolean aux [] = new boolean [ n + 1 ];
+    private static int perm [] = new int [ n + 1 ];
+    private static boolean aux [] = new boolean [ n + 1 ];
     public static void Initialize () { // Initialize arrays aux and perm to true and 0, respectively.
         Arrays.fill ( aux, true );
         Arrays.fill ( perm, 0 );
