@@ -32,8 +32,8 @@ class Multi {
         int k = 1; // The current permutation value. Only increases when the current value is exhausted or the loop ends.
         while ( j <= max ) { // Iterate through all posible n values at current column i, backtracking when the max value is reached.
             if ( aux [ k ] == 0 ) { // If the current k value is not free, increase k and j, and go to next iteration.
-                k = k + 1;
-                j = j + 1;
+                j += 1;
+                k += 1;
                 continue;
             }
             else { // The current k value is still free.
@@ -51,8 +51,8 @@ class Multi {
             else {
                 MultiAlg ( i + 1 ); // Call the algorithm with the next i value, i.e. the next column of the array.
             }
-            k = k + 1;  // Increase the k value to try the next one possible.
-            j = j + 1;  // Increase j to check if the maximum is reached.
+            j += 1;  // Increase the k value to try the next one possible.
+            k += 1;  // Increase j to check if the maximum is reached.
         }
         aux [ multiset [ i ] ] += 1; // Free the value at position i of the permutation.
         multiset [ i ] = 0;
